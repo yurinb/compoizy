@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import MainHeader from '../src/components/header/main-header'
-import ComposeYmlHeader from '../src/components/header/compose-yml-header'
+import DockerCompose from '../src/components/content/docker-compose/docker-compose'
 
 export default function Home() {
   return (
@@ -9,44 +9,36 @@ export default function Home() {
         <title>Compoizy</title>
         <link rel="icon" href="/favicon.ico" />
         <link href="https://fonts.googleapis.com/css2?family=Rationale&display=swap" rel="stylesheet"></link>
+        <link rel="stylesheet" href="/css/xt256.css"></link>
       </Head>
 
       <main>
-        <div>
-          <MainHeader />
-          <ComposeYmlHeader />
+        <div className="container">
+          <div className="left-side-container">
+            <MainHeader />
+          </div>
+          <div className="right-side-container">
+            <DockerCompose />
+          </div>
         </div>
       </main>
 
       <style jsx global>
         {`
-          html,
-          body {
-            padding: 0;
-            margin: 0;
-          }
 
-          * {
-            box-sizing: border-box;
-            font-family: 'Rationale', sans-serif;
-            font-weight: normal;
-          }
-
-          main * {
+          .container {
             display: flex;
+            flex-direction: row;
           }
 
-          body {
-            --background: #282A36;
-            --dark-background: #20222C;
-            --transparent-dark-background: rgba(32, 34, 44, 0.5);
-            --blue: #8BE9FD;
-            --dark-blue: #6272A4;
-            --white: #E5E5E5;
-            --purple: #BD93F9;
-            --green: #6FCF97;
-            --red: #EB5757;
+          .left-side-container, .right-side-container {
+            display: flex;
+            width: 50vw;
+            max-width: 50vw;
+            height: 100vh;
+            background: var(--background);
           }
+
         `}
       </style>
     </div>

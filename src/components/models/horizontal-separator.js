@@ -1,4 +1,4 @@
-export default function VerticalSeparator () {
+export default function HorizontalSeparator () {
     return (
         <>
 
@@ -8,8 +8,8 @@ export default function VerticalSeparator () {
                 {`
                     .separator {
                         background: var(--dark-background);
-                        width: 1px;
-                        height: 100%;
+                        height: 1px;
+                        width: 100%;
                     }
                 `}
             </style>

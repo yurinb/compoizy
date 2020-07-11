@@ -1,34 +1,45 @@
 import FilterNoneIcon from '@material-ui/icons/FilterNone';
 import GetAppIcon from '@material-ui/icons/GetApp';
+import HorizontalSeparator from '../models/horizontal-separator';
 
 export default function ComposeYmlHeader () {
     return (
         <>
 
-            <header>
-                
-                <div className="header-text-container">
-                    <h1 className="header-title">
-                        docker-compose.yml
-                    </h1>
-                </div>
+            <div className="header-container">
 
-                <div className="action-icon-container">
-                    <FilterNoneIcon style={{ color: 'var(--green)' }} />
-                </div>
-                
-                <div className="action-icon-container">
-                    <GetAppIcon style={{ color: 'var(--green)' }} />
-                </div>
+                <header>
+                        
+                    <div className="header-text-container">
+                        <h2 className="header-title">
+                            docker-compose.yml
+                        </h2>
+                    </div>
 
-            </header>
+                    <div className="action-icon-container">
+                        <FilterNoneIcon style={{ color: 'var(--green)' }} />
+                    </div>
+                    
+                    <div className="action-icon-container">
+                        <GetAppIcon style={{ color: 'var(--green)' }} />
+                    </div>
+
+                 </header>
+
+                <HorizontalSeparator />
+
+            </div>
 
             <style jsx>
                 {`
-                    header {
-                        background-color: var(--background);
-                        height: 125px;
+                    .header-container {
                         width: 100%;
+                    }
+                    
+                    header {
+                        display: flex;
+                        height: 125px;
+                        background-color: var(--background);
                         padding-left: 50px;
                         align-items: center;
                     }

@@ -1,38 +1,51 @@
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import HorizontalSeparator from '../models/horizontal-separator';
 import VerticalSeparator from '../models/vertical-separator';
 
 export default function MainHeader () {
     return (
         <>
+            <div className="header-container">
 
-            <header>
-                
-                <img src="/imgs/compose-logo.png" alt="logo"/>
-                
-                <div className="header-text-container">
-                    <h1 className="header-name">
-                        Compoizy
-                    </h1>
+                <header>
+                    
+                    <img src="/imgs/compose-logo.png" alt="logo"/>
+                    
+                    <div className="header-text-container">
+                        <h1 className="header-name">
+                            Compoizy
+                        </h1>
 
-                    <h3 className="header-description">
-                        Izy way to make docker-compose files
-                    </h3>
-                </div>
+                        <h3 className="header-description">
+                            Izy way to make docker-compose files
+                        </h3>
+                    </div>
 
-                <div className="action-icon-container">
-                    <FavoriteIcon style={{ color: 'var(--red)' }} />
-                </div>
+                    <div className="action-icon-container">
+                        <FavoriteIcon style={{ color: 'var(--red)' }} />
+                    </div>
 
-                <VerticalSeparator />
+                    <VerticalSeparator />
 
-            </header>
+                </header>
+
+                <HorizontalSeparator />
+                    
+            </div>
+
 
             <style jsx>
                 {`
-                    header {
+                    .header-container {
                         background-color: var(--background);
                         height: 125px;
+                        max-height: 125px;
                         width: 100%;
+                    }
+                    
+                    header {
+                        height: 100%;
+                        display: flex;
                         padding-left: 25px;
                         align-items: center;
                     }
@@ -42,7 +55,6 @@ export default function MainHeader () {
                     }
 
                     .header-text-container {
-                        flex-direction: column;
                         justify-content: center;
                         padding-left: 15px;
                         width: 100%;
