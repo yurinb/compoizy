@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styled from 'styled-components'
 import DockerComposeScreen from './docker_compose/docker_compose_screen'
 import MainScreen from './main/main_screen'
+import { Resizable } from 're-resizable'
 
 export default function HomeScreen () {
   return (
@@ -17,9 +18,23 @@ export default function HomeScreen () {
       <main>
         <RowContainer>
 
-          <HalfScreenContainer>
+          <HalfScreenContainerResizable
+            defaultSize={{
+              width: '50vw'
+            }}
+            enabled={{
+              top: false,
+              right: true,
+              bottom: false,
+              left: false,
+              topRight: false,
+              bottomRight: false,
+              bottomLeft: false,
+              topLeft: false
+            }}
+          >
             <MainScreen />
-          </HalfScreenContainer>
+          </HalfScreenContainerResizable>
 
           <HalfScreenContainer>
             <DockerComposeScreen />
@@ -33,14 +48,26 @@ export default function HomeScreen () {
 }
 
 const RowContainer = styled.div`
+  width: 100vw;
+  max-width: 100vw;
   display: flex;
   flex-direction: row;
+  overflow: hidden;
 `
 
 const HalfScreenContainer = styled.div`
   display: flex;
-  width: 50vw;
-  max-width: 50vw;
+  width: 100%;
+  max-width: calc(100% - 475px);
+  min-width: 475px;
+  height: 100vh;
+  background: var(--background);
+`
+const HalfScreenContainerResizable = styled(Resizable)`
+  display: flex;
+  
+  max-width: calc(100% - 475px);
+  min-width: 475px;
   height: 100vh;
   background: var(--background);
 `

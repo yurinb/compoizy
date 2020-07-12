@@ -1,8 +1,8 @@
+import { useEffect } from 'react'
 import Highlight from 'react-highlight'
 import YAML from 'yaml'
 import styled from 'styled-components'
 import Header from './docker_compose_header'
-import { useEffect } from 'react'
 
 const example = {
   version: '3.7',
@@ -157,6 +157,7 @@ export default function DockerComposeScreen ({ ymlObject = example }) {
 
 const Container = styled.div`
     width: 100%;
+    min-width: 475px;
     display: flex;
     flex-direction: column;
 `
@@ -168,7 +169,7 @@ const ComposeContainer = styled.div`
     
     pre {
         letter-spacing: 2px;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
     span  {
         visibility: hidden;
@@ -176,7 +177,6 @@ const ComposeContainer = styled.div`
 `
 
 const StyledHighlight = styled(Highlight)`
-    width: 50vw;
+    width: 100%;
     padding: 35px;
-
 `

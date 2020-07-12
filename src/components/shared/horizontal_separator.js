@@ -8,4 +8,5 @@ const Separator = styled.div`
     background: var(--dark-background);
     height: 1px;
     width: 100%;
+    margin-top: -1px;
 `
