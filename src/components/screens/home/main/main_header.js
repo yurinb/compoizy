@@ -1,38 +1,38 @@
-import FavoriteIcon from '@material-ui/icons/Favorite';
+import FavoriteIcon from '@material-ui/icons/Favorite'
 import styled from 'styled-components'
 import HorizontalSeparator from '../../../shared/horizontal_separator'
-import VerticalSeparator from '../../../shared/vertical_separator';
+import VerticalSeparator from '../../../shared/vertical_separator'
 
 export default function MainHeader () {
-    return (
-        <Container>
+  return (
+    <Container>
 
-            <Header>
-                
-                <ComposeLogo src="/imgs/compose_logo.png" alt="logo"/>
-                
-                <HeaderTextContainer>
-                    <HeaderTitle>
+      <Header>
+
+        <ComposeLogo src="/imgs/compose_logo.png" alt="logo"/>
+
+        <HeaderTextContainer>
+          <HeaderTitle>
                         Compoizy
-                    </HeaderTitle>
+          </HeaderTitle>
 
-                    <HeaderSubtitle>
+          <HeaderSubtitle>
                         Izy way to make docker-compose files
-                    </HeaderSubtitle>
-                </HeaderTextContainer>
+          </HeaderSubtitle>
+        </HeaderTextContainer>
 
-                <IconContainer>
-                    <FavoriteIcon style={{ color: 'var(--red)' }} />
-                </IconContainer>
+        <IconContainer>
+          <FavoriteIcon style={{ color: 'var(--red)' }} />
+        </IconContainer>
 
-                <VerticalSeparator />
+        <VerticalSeparator />
 
-            </Header>
+      </Header>
 
-            <HorizontalSeparator />
-                
-        </Container>
-    )
+      <HorizontalSeparator />
+
+    </Container>
+  )
 }
 
 const Container = styled.div`

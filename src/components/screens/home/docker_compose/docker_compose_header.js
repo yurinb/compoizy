@@ -1,35 +1,34 @@
-import FilterNoneIcon from '@material-ui/icons/FilterNone';
-import GetAppIcon from '@material-ui/icons/GetApp';
+import FilterNoneIcon from '@material-ui/icons/FilterNone'
+import GetAppIcon from '@material-ui/icons/GetApp'
 import styled from 'styled-components'
 import HorizontalSeparator from '../../../shared/horizontal_separator'
 
 export default function DockerComposeHeader ({ handleCopy, handleDownload }) {
+  return (
+    <Container>
 
-    return (
-        <Container>
+      <Header>
 
-            <Header>
-                    
-                <HeaderTitleContainer>
-                    <HeaderTitle>
+        <HeaderTitleContainer>
+          <HeaderTitle>
                         docker-compose.yml
-                    </HeaderTitle>
-                </HeaderTitleContainer>
+          </HeaderTitle>
+        </HeaderTitleContainer>
 
-                <IconContainer onClick={handleCopy}>
-                    <FilterNoneIcon style={{ color: 'var(--green)' }} />
-                </IconContainer>
-                
-                <IconContainer onClick={handleDownload}>
-                    <GetAppIcon style={{ color: 'var(--green)' }} />
-                </IconContainer>
+        <IconContainer onClick={handleCopy}>
+          <FilterNoneIcon style={{ color: 'var(--green)' }} />
+        </IconContainer>
 
-                </Header>
+        <IconContainer onClick={handleDownload}>
+          <GetAppIcon style={{ color: 'var(--green)' }} />
+        </IconContainer>
 
-            <HorizontalSeparator />
+      </Header>
 
-        </Container>
-    )
+      <HorizontalSeparator />
+
+    </Container>
+  )
 }
 
 const Container = styled.div`

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export default function VerticalSeparator () {
-    return <Separator />
+  return <Separator />
 }
 
 const Separator = styled.div`

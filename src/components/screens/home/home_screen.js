@@ -3,8 +3,7 @@ import styled from 'styled-components'
 import DockerComposeScreen from './docker_compose/docker_compose_screen'
 import MainScreen from './main/main_screen'
 
-export default function HomeScreen() {
-  
+export default function HomeScreen () {
   return (
     <RowContainer>
 

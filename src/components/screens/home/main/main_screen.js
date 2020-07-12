@@ -1,17 +1,14 @@
-import styled from 'styled-components';
-import Header from './main_header';
+import styled from 'styled-components'
+import Header from './main_header'
 
-export default function MainScreen() {
+export default function MainScreen () {
+  return (
+    <Container>
 
-    return (
-        <Container>
+      <Header />
 
-            <Header />
-
-            
-            
-        </Container>
-    )
+    </Container>
+  )
 }
 
 const Container = styled.div`

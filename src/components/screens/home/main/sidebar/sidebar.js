@@ -1,12 +1,11 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-export default function SideBar() {
+export default function SideBar () {
+  return (
+    <Container>
 
-    return (
-        <Container>
-            
-        </Container>
-    )
+    </Container>
+  )
 }
 
 const Container = styled.div`
