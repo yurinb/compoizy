@@ -53,6 +53,7 @@ const RowContainer = styled.div`
   display: flex;
   flex-direction: row;
   overflow: hidden;
+  max-height: 100vh;
 `
 
 const HalfScreenContainer = styled.div`
@@ -65,7 +66,6 @@ const HalfScreenContainer = styled.div`
 `
 const HalfScreenContainerResizable = styled(Resizable)`
   display: flex;
-  
   max-width: calc(100% - 475px);
   min-width: 475px;
   height: 100vh;

@@ -5,7 +5,6 @@ import MainSideBar from './sidebar/sidebar'
 export default function MainScreen () {
   return (
     <Container>
-
       <Header />
 
       <MainSideBar />
@@ -15,8 +14,8 @@ export default function MainScreen () {
 }
 
 const Container = styled.div`
-    height: 100%;
-    width: 100%;
-    min-width: 475px;
-    background: var(--dark-background);
+  height: 100%;
+  width: 100%;
+  min-width: 475px;
+  background: var(--background);
 `

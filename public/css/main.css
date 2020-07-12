@@ -21,11 +21,11 @@ body {
 /* scrollbar */
 
 ::-webkit-scrollbar {
-    width: 2px;
+    width: 1px;
 }
 
 ::-webkit-scrollbar:horizontal {
-    height: 2px;
+    height: 1px;
 }
 
 ::-webkit-scrollbar-track {
