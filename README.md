@@ -1,3 +1,15 @@
+# 🚧 Project in development 🚧
+
+## Compoizy is a web application to easy create docker-compose.yml files
+
+### * Integration with Dockerhub - intellisense like features
+### * Integration with Github - Search into all repositories for docker-compose.yml files examples
+
+### Mock layout - In development
+
+![Screenshot](mock.png)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
