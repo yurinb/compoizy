@@ -11,16 +11,16 @@ export default function DockerComposeHeader ({ handleCopy, handleDownload }) {
 
         <HeaderTitleContainer>
           <HeaderTitle>
-                        docker-compose.yml
+            docker-compose.yml
           </HeaderTitle>
         </HeaderTitleContainer>
 
         <IconContainer onClick={handleCopy}>
-          <FilterNoneIcon style={{ color: 'var(--green)' }} />
+          <CopyIcon />
         </IconContainer>
 
         <IconContainer onClick={handleDownload}>
-          <GetAppIcon style={{ color: 'var(--green)' }} />
+          <DownloadIcon />
         </IconContainer>
 
       </Header>
@@ -66,4 +66,13 @@ const IconContainer = styled.div`
             color: var(--purple) !important;
         }
     }
+`
+
+const CopyIcon = styled(FilterNoneIcon)`
+  color: var(--green);
+`
+
+const DownloadIcon = styled(GetAppIcon)`
+  color: var(--green);
+  transform: scale(1.2);
 `
