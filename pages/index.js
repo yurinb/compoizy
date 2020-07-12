@@ -1,10 +1,13 @@
 import Head from 'next/head'
+import styled from 'styled-components'
 import MainHeader from '../src/components/header/main-header'
 import DockerCompose from '../src/components/content/docker-compose/docker-compose'
 
 export default function Home() {
+  
   return (
-    <div className="container">
+    <RowContainer>
+
       <Head>
         <title>Compoizy</title>
         <link rel="icon" href="/favicon.ico" />
@@ -13,34 +16,33 @@ export default function Home() {
       </Head>
 
       <main>
-        <div className="container">
-          <div className="left-side-container">
+        <RowContainer>
+
+          <HalfScreenContainer>
             <MainHeader />
-          </div>
-          <div className="right-side-container">
+          </HalfScreenContainer>
+
+          <HalfScreenContainer>
             <DockerCompose />
-          </div>
-        </div>
+          </HalfScreenContainer>
+
+        </RowContainer>
       </main>
 
-      <style jsx global>
-        {`
-
-          .container {
-            display: flex;
-            flex-direction: row;
-          }
-
-          .left-side-container, .right-side-container {
-            display: flex;
-            width: 50vw;
-            max-width: 50vw;
-            height: 100vh;
-            background: var(--background);
-          }
-
-        `}
-      </style>
-    </div>
+    </RowContainer>
   )
 }
+
+const RowContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
+const HalfScreenContainer = styled.div`
+  display: flex;
+  width: 50vw;
+  max-width: 50vw;
+  height: 100vh;
+  background: var(--background);
+`
+

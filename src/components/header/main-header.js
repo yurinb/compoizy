@@ -1,87 +1,79 @@
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import styled from 'styled-components'
 import HorizontalSeparator from '../models/horizontal-separator';
 import VerticalSeparator from '../models/vertical-separator';
 
 export default function MainHeader () {
     return (
-        <>
-            <div className="header-container">
+        <Container>
 
-                <header>
-                    
-                    <img src="/imgs/compose-logo.png" alt="logo"/>
-                    
-                    <div className="header-text-container">
-                        <h1 className="header-name">
-                            Compoizy
-                        </h1>
+            <Header>
+                
+                <ComposeLogo src="/imgs/compose-logo.png" alt="logo"/>
+                
+                <HeaderTextContainer>
+                    <HeaderTitle>
+                        Compoizy
+                    </HeaderTitle>
 
-                        <h3 className="header-description">
-                            Izy way to make docker-compose files
-                        </h3>
-                    </div>
+                    <HeaderSubtitle>
+                        Izy way to make docker-compose files
+                    </HeaderSubtitle>
+                </HeaderTextContainer>
 
-                    <div className="action-icon-container">
-                        <FavoriteIcon style={{ color: 'var(--red)' }} />
-                    </div>
+                <IconContainer>
+                    <FavoriteIcon style={{ color: 'var(--red)' }} />
+                </IconContainer>
 
-                    <VerticalSeparator />
+                <VerticalSeparator />
 
-                </header>
+            </Header>
 
-                <HorizontalSeparator />
-                    
-            </div>
-
-
-            <style jsx>
-                {`
-                    .header-container {
-                        background-color: var(--background);
-                        height: 125px;
-                        max-height: 125px;
-                        width: 100%;
-                    }
-                    
-                    header {
-                        height: 100%;
-                        display: flex;
-                        padding-left: 25px;
-                        align-items: center;
-                    }
-
-                    img {
-                        height: 50px;
-                    }
-
-                    .header-text-container {
-                        justify-content: center;
-                        padding-left: 15px;
-                        width: 100%;
-                    }
-
-                    .header-name {
-                        color: var(--blue);
-                        margin: 0;
-                    }
-                    
-                    .header-description {
-                        color: var(--white);
-                        margin: 0;
-                    }
-
-                    .action-icon-container {
-                        margin: 50px;
-                        cursor: pointer;
-                        transition: transform 1s;  
-                    }
-
-                    .action-icon-container:hover {
-                        transform: scale(2);
-                    }
-                `}
-            </style>
-
-        </>
+            <HorizontalSeparator />
+                
+        </Container>
     )
 }
+
+const Container = styled.div`
+    background-color: var(--background);
+    height: 125px;
+    max-height: 125px;
+    width: 100%;
+`
+
+const Header = styled.header`
+    height: 100%;
+    display: flex;
+    padding-left: 25px;
+    align-items: center;
+`
+
+const ComposeLogo = styled.img`
+    height: 50px;
+`
+
+const HeaderTextContainer = styled.div`
+    justify-content: center;
+    padding-left: 15px;
+    width: 100%;
+`
+
+const HeaderTitle = styled.h1`
+    color: var(--blue);
+    margin: 0;
+`
+
+const HeaderSubtitle = styled.h3`
+    color: var(--white);
+    margin: 0;
+`
+
+const IconContainer = styled.div`
+    margin: 50px;
+    cursor: pointer;
+    transition: transform 1.5s; 
+    &:hover {
+        transform: scale(2.25);
+    }
+`

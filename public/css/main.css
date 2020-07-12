@@ -21,22 +21,37 @@ body {
 /* scrollbar */
 
 ::-webkit-scrollbar {
-    width: 3px;
-  }
+    width: 2px;
+}
 
-/* Track */
+::-webkit-scrollbar:horizontal {
+    height: 2px;
+}
+
 ::-webkit-scrollbar-track {
-background: transparent;
+    background: transparent;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
-background: var(--green);
+    background: var(--green);
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-background: var(--dark-blue);
+    background: var(--dark-blue);
 }
 
 /* ----------- */
+
+/* selected elements colors */
+*::-moz-selection { color: var(--blue); }
+*::selection { color: var(--blue); }
+
+.unselectable {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                        supported by Chrome, Edge, Opera and Firefox */
+}

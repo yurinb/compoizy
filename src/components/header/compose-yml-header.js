@@ -1,73 +1,70 @@
 import FilterNoneIcon from '@material-ui/icons/FilterNone';
 import GetAppIcon from '@material-ui/icons/GetApp';
+import styled from 'styled-components'
 import HorizontalSeparator from '../models/horizontal-separator';
 
-export default function ComposeYmlHeader () {
+export default function ComposeYmlHeader ({ handleCopy, handleDownload }) {
+
     return (
-        <>
+        <Container>
 
-            <div className="header-container">
-
-                <header>
-                        
-                    <div className="header-text-container">
-                        <h2 className="header-title">
-                            docker-compose.yml
-                        </h2>
-                    </div>
-
-                    <div className="action-icon-container">
-                        <FilterNoneIcon style={{ color: 'var(--green)' }} />
-                    </div>
+            <Header>
                     
-                    <div className="action-icon-container">
-                        <GetAppIcon style={{ color: 'var(--green)' }} />
-                    </div>
+                <HeaderTitleContainer>
+                    <HeaderTitle>
+                        docker-compose.yml
+                    </HeaderTitle>
+                </HeaderTitleContainer>
 
-                 </header>
+                <IconContainer onClick={handleCopy}>
+                    <FilterNoneIcon style={{ color: 'var(--green)' }} />
+                </IconContainer>
+                
+                <IconContainer onClick={handleDownload}>
+                    <GetAppIcon style={{ color: 'var(--green)' }} />
+                </IconContainer>
 
-                <HorizontalSeparator />
+                </Header>
 
-            </div>
+            <HorizontalSeparator />
 
-            <style jsx>
-                {`
-                    .header-container {
-                        width: 100%;
-                    }
-                    
-                    header {
-                        display: flex;
-                        height: 125px;
-                        background-color: var(--background);
-                        padding-left: 50px;
-                        align-items: center;
-                    }
-
-                    .header-text-container {
-                        flex-direction: column;
-                        justify-content: center;
-                        padding-left: 15px;
-                        width: 100%;
-                    }
-
-                    .header-title {
-                        color: var(--white);
-                        margin: 0;
-                    }
-
-                    .action-icon-container {
-                        margin-right: 50px;
-                        cursor: pointer;
-                        transition: transform .1s;  
-                    }
-
-                    .action-icon-container:hover {
-                        transform: scale(1.5);
-                    }
-                `}
-            </style>
-
-        </>
+        </Container>
     )
 }
+
+const Container = styled.div`
+    width: 100%;
+`
+
+const Header = styled.header`
+    display: flex;
+    height: 125px;
+    background-color: var(--background);
+    padding-left: 50px;
+    align-items: center;
+`
+
+const HeaderTitleContainer = styled.div`
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 15px;
+    width: 100%;
+`
+
+const HeaderTitle = styled.h2`
+    color: var(--white);
+    margin: 0;
+`
+
+const IconContainer = styled.div`
+    margin-right: 50px;
+    cursor: pointer;
+    transition:all 0.3s ease;
+
+    &:hover {
+        transform: scale(1.25);
+        svg {
+            color: var(--purple) !important;
+        }
+    }
+`
