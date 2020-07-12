@@ -1,7 +1,7 @@
 import Highlight from 'react-highlight'
 import YAML from 'yaml'
 import styled from 'styled-components'
-import ComposeYmlHeader from '../../header/compose-yml-header'
+import Header from './docker_compose_header'
 import { useEffect } from 'react'
 
 const example = {
@@ -78,7 +78,7 @@ const example = {
     }
 }
 
-export default function DockerCompose({ ymlObject = example }) {
+export default function DockerComposeScreen({ ymlObject = example }) {
 
     useEffect(() => {
         hideSpaces()
@@ -139,7 +139,7 @@ export default function DockerCompose({ ymlObject = example }) {
   return (
     <Container>
         
-        <ComposeYmlHeader 
+        <Header 
             handleDownload={() => downloadDockerCompose()} 
             handleCopy={() => copyDockerComposeToClipboard()} 
         />

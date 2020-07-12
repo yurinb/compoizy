@@ -1,7 +1,7 @@
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import styled from 'styled-components'
-import HorizontalSeparator from '../models/horizontal-separator';
-import VerticalSeparator from '../models/vertical-separator';
+import HorizontalSeparator from '../../../shared/horizontal_separator'
+import VerticalSeparator from '../../../shared/vertical_separator';
 
 export default function MainHeader () {
     return (
@@ -9,7 +9,7 @@ export default function MainHeader () {
 
             <Header>
                 
-                <ComposeLogo src="/imgs/compose-logo.png" alt="logo"/>
+                <ComposeLogo src="/imgs/compose_logo.png" alt="logo"/>
                 
                 <HeaderTextContainer>
                     <HeaderTitle>

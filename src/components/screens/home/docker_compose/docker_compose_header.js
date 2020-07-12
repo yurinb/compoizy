@@ -1,9 +1,9 @@
 import FilterNoneIcon from '@material-ui/icons/FilterNone';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import styled from 'styled-components'
-import HorizontalSeparator from '../models/horizontal-separator';
+import HorizontalSeparator from '../../../shared/horizontal_separator'
 
-export default function ComposeYmlHeader ({ handleCopy, handleDownload }) {
+export default function DockerComposeHeader ({ handleCopy, handleDownload }) {
 
     return (
         <Container>
