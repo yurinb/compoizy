@@ -71,8 +71,9 @@ const HeaderSubtitle = styled.h3`
 
 const IconContainer = styled.div`
     margin: 50px;
-    cursor: pointer;
+    line-height: 0;
     transition: transform 1.5s; 
+    cursor: pointer;
     &:hover {
         transform: scale(2.25);
     }

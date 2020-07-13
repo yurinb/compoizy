@@ -21,7 +21,11 @@ export default function MainSideBar () {
         {dockerhubImages.map((image) => (
           <SideBarItem info={image} key={image.slug}>
             <DockerhubImageLogo
-              src={image.logo_url.large || image.logo_url.small || '/imgs/default_image_logo.png'}
+              src={
+                image.logo_url.large ||
+                image.logo_url.small ||
+                '/imgs/default_image_logo.png'
+              }
             />
           </SideBarItem>
         ))}
@@ -43,6 +47,10 @@ const Container = styled.div`
 const AddServiceButton = styled(AddIcon)`
   color: var(--green);
   transform: scale(1.5);
+  &:hover {
+    -webkit-filter: drop-shadow(0px 0px 5px var(--purple));
+    filter: drop-shadow(0px 0px 5px var(--purple));
+  }
 `
 
 const ImagesContainer = styled.div`

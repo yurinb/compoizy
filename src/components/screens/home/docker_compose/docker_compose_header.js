@@ -57,9 +57,9 @@ const HeaderTitle = styled.h2`
 
 const IconContainer = styled.div`
     margin-right: 50px;
-    cursor: pointer;
+    line-height: 0;
     transition:all 0.3s ease;
-
+    cursor: pointer;
     &:hover {
         transform: scale(1.25);
         svg {
