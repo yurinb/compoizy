@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import SideBarButton from './button'
+import SideBarItem from './sidebar_item'
 import AddIcon from '@material-ui/icons/Add'
 import { useEffect, useState } from 'react'
 
@@ -13,17 +13,17 @@ export default function MainSideBar () {
 
   return (
     <Container>
-      <SideBarButton solid>
+      <SideBarItem solid>
         <AddServiceButton />
-      </SideBarButton>
+      </SideBarItem>
 
       <ImagesContainer>
         {dockerhubImages.map((image) => (
-          <SideBarButton solid key={image.slug}>
+          <SideBarItem info={image} key={image.slug}>
             <DockerhubImageLogo
               src={image.logo_url.large || image.logo_url.small}
             />
-          </SideBarButton>
+          </SideBarItem>
         ))}
       </ImagesContainer>
     </Container>
