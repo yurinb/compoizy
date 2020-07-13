@@ -21,7 +21,7 @@ export default function MainSideBar () {
         {dockerhubImages.map((image) => (
           <SideBarItem info={image} key={image.slug}>
             <DockerhubImageLogo
-              src={image.logo_url.large || image.logo_url.small}
+              src={image.logo_url.large || image.logo_url.small || '/imgs/default_image_logo.png'}
             />
           </SideBarItem>
         ))}
